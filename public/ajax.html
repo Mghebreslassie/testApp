@@ -1,0 +1,17 @@
+<script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
+
+<script>
+    const ourRequest = $.ajax({
+        method: "POST",
+        url: "http://localhost:3000/ajax",
+        dataType: "json",
+        data: {
+            name: 'Rob',
+            age: 43,
+            job: "janitor"
+        }
+    })
+    ourRequest.then((response)=>{
+        console.log(response)
+    })
+</script>
